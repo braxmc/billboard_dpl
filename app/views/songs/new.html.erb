@@ -1,0 +1,14 @@
+<h1>Add New Song</h1>
+
+  <%= form_for [@artist, @song] do |f| %>
+
+  <%= f.label :song_name %>
+  <%= f.text_field :song_name, required: true, placeholder: "Song Name"%>
+
+  <%= f.label :genre %>
+  <%= f.text_field :genre, require: true, placeholder: "Genre"%>
+
+  <%= f.submit %>
+
+  <% end %>
+

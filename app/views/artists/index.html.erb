@@ -1,0 +1,21 @@
+<%= link_to 'Add Artist', new_billboard_artist_path(@billboard) %>
+<br/>
+<br/>
+
+<% @bands.each do |band| %>
+  <li>
+  <%= band.artist_name%>
+  <br />
+  Genre - <%= band.genre %>
+  </li>
+  <br/>
+  <%= link_to "Artist Song's", artist_songs_path(band)%>
+  <br />
+  <br/>
+  <%= link_to 'Edit Artist', edit_billboard_artist_path(@billboard, band) %>
+  <%= link_to 'Remove Artist', billboard_artist_path(@billboard, band), method: :delete %>
+  <br/>
+  <%= link_to 'Back to Hit', billboard_path(@billboard.id) %>
+  <%= link_to 'Back to Billboard', billboards_path %> 
+  <br/>
+<% end %>

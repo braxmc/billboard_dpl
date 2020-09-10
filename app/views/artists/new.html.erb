@@ -1,0 +1,13 @@
+<h1>Artists#new</h1>
+
+  <%= form_for [@billboard, @band] do |f| %>
+
+  <%= f.label :artist_name %>
+  <%= f.text_field :artist_name, required: true, placeholder: "Artist_Name"%>
+
+  <%= f.label :genre %>
+  <%= f.text_field :genre, require: true, placeholder: "Genre"%>
+
+  <%= f.submit %>
+
+  <% end %>

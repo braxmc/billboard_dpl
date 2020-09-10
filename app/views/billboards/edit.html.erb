@@ -1,0 +1,13 @@
+<h1>Edit <%= @billboard.rating %> </h1>
+
+<%= form_for @billboard do |f| %>
+
+  <%= f.label :rating %>
+  <%= f.text_field :rating, required: true, placeholder: "rating" %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description, required: true, placeholder: "Band: Description"%>
+
+  <%= f.submit %>
+
+<% end %>

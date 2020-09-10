@@ -1,0 +1,13 @@
+<h1>Billboards</h1>
+
+<%= link_to 'New Hit', new_billboard_path %>
+
+<% @billboards.each do |billboard| %>
+
+  <ul>
+
+    <%= link_to billboard.rating, billboard_path(billboard.id) %>
+
+  </ul>
+  
+<% end %>

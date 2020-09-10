@@ -1,0 +1,22 @@
+<h1> <%= @artist.artist_name.capitalize %> </h1>
+
+<%= link_to 'Add Song', new_artist_song_path() %>
+<br/>
+<br/>
+
+<% @songs.each do |song| %>
+
+<%= song.song_name.capitalize %>
+<br/>
+<%= song.genre.capitalize %>
+<br/>
+<br/>
+<%= link_to 'Edit Song', edit_artist_song_path(@artist, song) %>
+<br/>
+<%= link_to 'Delete Song', artist_song_path(@artist, song), method: :delete %>
+<br/>
+<br/>
+
+<% end %>
+
+<%= link_to 'Back To Artist', billboard_artists_path() %>

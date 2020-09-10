@@ -1,0 +1,14 @@
+<%= link_to "Edit", edit_billboard_path(@billboard.id) %>
+<%= link_to 'Delete', billboard_path(@billboard), method: :delete %>
+
+<h1> <%= @billboard.rating %> </h1>
+<br />
+<p> 
+  <%= @billboard.description%>
+</p>
+<br />
+<%= link_to 'Artist Info', billboard_artists_path(@billboard) %>
+<br />
+<%= link_to "Go Back", billboards_path %>
+
+
