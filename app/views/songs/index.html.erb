@@ -16,7 +16,10 @@
 <%= link_to 'Delete Song', artist_song_path(@artist, song), method: :delete %>
 <br/>
 <br/>
+<br/>
 
 <% end %>
 
-<%= link_to 'Back To Artist', billboard_artists_path() %>
+<%= link_to 'Back To Artists', billboard_artists_path(@artist.billboard_id, @artist) %>
+<br/>
+<%= link_to 'Back To Billboard', root_path() %>
